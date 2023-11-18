@@ -71,7 +71,57 @@ var times = [
     }
   
     var texto = `Maior pontuação é do time: ${timeComMaiorPontuacao.nome}`;
-  
+    //em cada case aparecera a imagem do time e o texto com a maior pontuação 
+switch (timeComMaiorPontuacao.nome) {
+    case 'Arsenal':
+      texto += `
+        <div style="text-align: center;">
+          <img src="https://myplaceloungechiangmai.com/wp-content/uploads/2017/08/arsenal-logo-vector-200x200.png" alt="Arsenal" style="width: 100px; height: 100px;">
+          <p style="margin-top: 10px; font-size:22px"> Com ${maiorPontuacao} pontos</p>
+        </div>
+      `;
+      
+      break;
+    case 'Man. City':
+      texto +=`  
+      <div style="text-align: center;">
+          <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/382.png&h=200&w=200" alt="Man. City" style="width: 100px; height: 100px;">
+          <p style="margin-top: 10px; font-size:22px"> Com ${maiorPontuacao} pontos</p>
+        </div>
+      `;
+      break;
+    case 'H. Tottenham':
+      texto +=`  
+      <div style="text-align: center;">
+         <img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/18787.png&h=200&w=200" alt="H. Tottenham" style="width: 110px; height: 115px;">
+         <p style="margin-top: 10px; font-size:22px"> Com ${maiorPontuacao} pontos</p>
+        </div>
+      `;
+      break;
+      
+      
+    case 'Liverpool':
+     texto +=`  
+      <div style="text-align: center;">
+         <img src="https://myplaceloungechiangmai.com/wp-content/uploads/2017/08/liverpool-logo-vector-200x200.png" alt="Chelsea" style="width: 100px; height: 100px;">
+         <p style="margin-top: 10px; font-size:22px"> Com ${maiorPontuacao} pontos</p>
+        </div>
+      `;
+      break;
+      
+    case 'Chelsea':
+      texto +=`  
+      <div style="text-align: center;">
+         <img src=" https://myplaceloungechiangmai.com/wp-content/uploads/2017/08/chelsea-logo-vector-200x200.png" alt="Chelsea" style="width: 100px; height: 100px;">
+         <p style="margin-top: 10px; font-size:22px"> Com ${maiorPontuacao} pontos</p>
+        </div>
+      `;
+      break;
+    // caso queira colocar mais  times...
+  }
+    
+  elementoTabela.innerHTML += `<tr><td colspan="9"><p>${texto}</p></td></tr>`;
+  }
   
   function adicionarVitoria(index) {
     times[index].vitoria++;
